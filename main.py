@@ -1,6 +1,6 @@
 from product import Product
 from product_manager import ProductManager
-
+from cart import Cart
 
 manager = ProductManager()
 
@@ -23,3 +23,14 @@ manager.remove_product("Mis")
 print("\nLista proizvoda nakon brisanja:")
 
 manager.display_products()
+
+cart = Cart()
+
+cart.add_to_cart(product1)
+cart.add_to_cart(product2)
+cart.add_to_cart(product3)
+
+cart.display_cart()
+
+print("\nUkupno za naplatu:")
+print(cart.calculate_total())
