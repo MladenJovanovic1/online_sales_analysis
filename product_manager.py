@@ -7,8 +7,14 @@ class ProductManager:
         self.products = []
 
     def add_product(self, product):
-        self.products.append(product)
-
+        self.products.append(product) 
+    def remove_product(self, name):
+        for product in self.products:
+            if product.name.lower() == name.lower():
+                self.products.remove(product)
+                print(f"Proizvod '{name}' je uklonjen.")
+                return
+        print(f"Proizvod '{name}' nije pronađen.")
     def display_products(self):
         for product in self.products:
             product.display_info()

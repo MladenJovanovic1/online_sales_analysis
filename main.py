@@ -16,3 +16,10 @@ manager.display_products()
 
 print("Ukupna vrednost inventara:")
 print(manager.total_inventory_value())
+print("\nBrisanje proizvoda:")
+
+manager.remove_product("Mis")
+
+print("\nLista proizvoda nakon brisanja:")
+
+manager.display_products()
